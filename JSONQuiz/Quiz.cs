@@ -10,21 +10,21 @@ namespace JSONQuiz
     public class Quiz
     {
         
-        public Quiz(string Name)
+        public Quiz(int choice)
         {
-            CreateQuestions(Name);
+            CreateQuestions(choice);
         }
-
         public List<Questions> AllQuestions { get; set; }
-        public void CreateQuestions(string name)
+
+        public void CreateQuestions(int choice)
         {
-            if (name == "1")
+            if (choice == 1)
             {
                 var path = Directory.GetCurrentDirectory() + "\\questions.json";
                 var content = File.ReadAllText(path, Encoding.GetEncoding("iso-8859-1"));
                 AllQuestions = JsonConvert.DeserializeObject<List<Questions>>(content);
             }
-            else if (name == "2")
+            else if (choice == 2)
             {
                 var path = Directory.GetCurrentDirectory() + "\\questions2.json";
                 var content = File.ReadAllText(path, Encoding.GetEncoding("iso-8859-1"));
@@ -37,11 +37,11 @@ namespace JSONQuiz
         }
            
 
-        public Questions GetQuestion()
+        public Questions GetQuestion(int number)
         {
             var question = AllQuestions.ToList();
-            var number = Randomizer.GetRandomNumber(6);
-            return question[number - 1];
+            //var number = Randomizer.GetRandomNumber(6);
+            return question[number];
         }
     }
 

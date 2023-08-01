@@ -45,7 +45,7 @@
   },
   {
     "Id": 3,
-    "Question": "Hvilken af følgender er ikke en access modifer?",
+    "Question": "Hvilken af følgender er ikke en access modifier?",
     "Info": "Secured eksistere ikke",
     "Answers": [
       {
@@ -116,17 +116,17 @@
     "Answers": [
       {
         "Id": 1,
-        "Text": "Skrive: public car const{} efter",
+        "Text": "Skrive: public car const{} INDE I klassen",
         "IsCorrect": false
       },
       {
         "Id": 2,
-        "Text": "Skrive public car(x){} INDE I klassen",
+        "Text": "Skrive: public car(x){} INDE I klassen",
         "IsCorrect": true
       },
       {
         "Id": 3,
-        "Text": "Skrive public car(x){} EFTER klassen",
+        "Text": "Skrive: public car(x){} EFTER klassen",
         "IsCorrect": false
       }
     ]
