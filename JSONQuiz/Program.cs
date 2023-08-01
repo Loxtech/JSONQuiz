@@ -12,7 +12,8 @@ namespace JSONQuiz
     {
         static void Main(string [] args)
         {
-            Quiz quiz = new Quiz();
+            string name = Console.ReadLine();
+            Quiz quiz = new Quiz(name);
             var question = quiz.GetQuestion();
             DisplayQuestion(question);
 

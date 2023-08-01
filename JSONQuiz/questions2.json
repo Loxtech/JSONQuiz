@@ -1,0 +1,134 @@
+[
+  {
+    "Id": 1,
+    "Question": "Hvor er value types gemt?",
+    "Info": "Value types er gemte i Stacken. Det er ting så som, strings, ints, bools osv. Stacken er hurtiger at tilgå",
+    "Answers": [
+      {
+        "Id": 1,
+        "Text": "I Stacken",
+        "IsCorrect": true
+      },
+      {
+        "Id": 2,
+        "Text": "I Heapen",
+        "IsCorrect": false
+      },
+      {
+        "Id": 3,
+        "Text": "I Kompileren",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Question": "Hvor er reference types gemt?",
+    "Info": "Reference types er gemte i Heapen. Det er ting så som, custom klasser, metoder osv. Der ligger en slags adresse for reference typens lokation i stacken som peger til lokationen i heapen",
+    "Answers": [
+      {
+        "Id": 1,
+        "Text": "I Stacken",
+        "IsCorrect": false
+      },
+      {
+        "Id": 2,
+        "Text": "I Heapen",
+        "IsCorrect": true
+      },
+      {
+        "Id": 3,
+        "Text": "I Kompileren",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Id": 3,
+    "Question": "Hvilken af følgender er ikke en access modifer?",
+    "Info": "Secured eksistere ikke",
+    "Answers": [
+      {
+        "Id": 1,
+        "Text": "Secured",
+        "IsCorrect": true
+      },
+      {
+        "Id": 2,
+        "Text": "Private",
+        "IsCorrect": false
+      },
+      {
+        "Id": 3,
+        "Text": "Protected",
+        "IsCorrect": false
+      }
+    ]
+  },
+  {
+    "Id": 4,
+    "Question": "Hvordan skrives en multidimensionel string array?",
+    "Info": "De frarådes at man bruger mere end en array med 2 dimensionner, i stedet burde man skrive sin kode anderledes",
+    "Answers": [
+      {
+        "Id": 1,
+        "Text": "multistring[] array = new multistring[x]",
+        "IsCorrect": false
+      },
+      {
+        "Id": 2,
+        "Text": "multiarray[][] array = new multiarray[x][]",
+        "IsCorrect": false
+      },
+      {
+        "Id": 3,
+        "Text": "string[][] multiArray = new stirng[x][]",
+        "IsCorrect": true
+      }
+    ]
+  },
+  {
+    "Id": 5,
+    "Question": "Hvilke af følgende begreber hører ikke til under OOP",
+    "Info": "Kontrolstrukturer er ting så som switch-case, if-else og loops. De bruges i samarbejde med OOP men er ikke konkrete begreber derfra",
+    "Answers": [
+      {
+        "Id": 1,
+        "Text": "Polymorfi",
+        "IsCorrect": false
+      },
+      {
+        "Id": 2,
+        "Text": "Indkapsling",
+        "IsCorrect": false
+      },
+      {
+        "Id": 3,
+        "Text": "kontrolstrukturer",
+        "IsCorrect": true
+      }
+    ]
+  },
+  {
+    "Id": 6,
+    "Question": "Hvordan ville du lave en constructor til denne klasse: public class car{}",
+    "Info": "Hvis man ikke selv laver en constructor findes den stadig, den er bare usynlig og tom. Constructors kan bruges til at udføre opgave der skal bruges hver gang klassen instanceres.",
+    "Answers": [
+      {
+        "Id": 1,
+        "Text": "Skrive: public car const{} efter",
+        "IsCorrect": false
+      },
+      {
+        "Id": 2,
+        "Text": "Skrive public car(x){} INDE I klassen",
+        "IsCorrect": true
+      },
+      {
+        "Id": 3,
+        "Text": "Skrive public car(x){} EFTER klassen",
+        "IsCorrect": false
+      }
+    ]
+  }
+]

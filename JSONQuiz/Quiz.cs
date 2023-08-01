@@ -9,18 +9,33 @@ namespace JSONQuiz
 {
     public class Quiz
     {
-        public Quiz()
+        
+        public Quiz(string Name)
         {
-            CreateQuestions();
+            CreateQuestions(Name);
         }
 
         public List<Questions> AllQuestions { get; set; }
-        public void CreateQuestions()
+        public void CreateQuestions(string name)
         {
-            var path = Directory.GetCurrentDirectory() + "\\questions.json";
-            var content = File.ReadAllText(path,Encoding.GetEncoding("iso-8859-1"));
-            AllQuestions = JsonConvert.DeserializeObject<List<Questions>>(content);
+            if (name == "1")
+            {
+                var path = Directory.GetCurrentDirectory() + "\\questions.json";
+                var content = File.ReadAllText(path, Encoding.GetEncoding("iso-8859-1"));
+                AllQuestions = JsonConvert.DeserializeObject<List<Questions>>(content);
+            }
+            else if (name == "2")
+            {
+                var path = Directory.GetCurrentDirectory() + "\\questions2.json";
+                var content = File.ReadAllText(path, Encoding.GetEncoding("iso-8859-1"));
+                AllQuestions = JsonConvert.DeserializeObject<List<Questions>>(content);
+            }
+            else
+            {
+                Console.WriteLine("Forkert input");
+            }
         }
+           
 
         public Questions GetQuestion()
         {
