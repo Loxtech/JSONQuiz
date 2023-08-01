@@ -18,10 +18,11 @@ namespace JSONQuiz
                 Console.Clear();
                 Quiz quiz = new Quiz(choice);
                 double points = 0;
+                int amountOfQuestions = quiz.AllQuestions.Count;
 
-                for (int i = 0; i < 6; i++)
+                for (int i = 0; i < amountOfQuestions; i++)
                 {
-                    Console.WriteLine($"Spørgsmål {i+1} / 6");
+                    Console.WriteLine($"Spørgsmål {i+1} / {amountOfQuestions}");
                     var question = quiz.GetQuestion(i);
                     DisplayQuestion(question);
                     if (ValidateUserAnswer(out int userNumber))
@@ -45,7 +46,7 @@ namespace JSONQuiz
                     Console.ReadKey();
                     Console.Clear();
                 }
-                Console.WriteLine($"Du havde: {points} ud af 6 rigtige det svare til {Math.Round(points / 6 * 100, 2)}%");
+                Console.WriteLine($"Du havde: {points} ud af 6 rigtige det svare til {Math.Round(points / amountOfQuestions * 100, 2)}%");
             }
         }
         private static bool ValidateUserChoice(out int userNumber)
@@ -69,7 +70,6 @@ namespace JSONQuiz
             userNumber = digit;
             return correctKey;
         }
-
         private static bool ValidateUserAnswer(out int userNumber)
         {
             bool correctKey = false;
@@ -91,7 +91,6 @@ namespace JSONQuiz
             userNumber = digit;
             return correctKey;
         }
-
         static void DisplayQuestion(Questions question)
         {
             Console.WriteLine($"\n{question.Question}\n");
@@ -101,7 +100,5 @@ namespace JSONQuiz
             }
             Console.WriteLine("\nIndtast nummeret på det svar du mener er rigtigt: 1, 2 eller 3");
         }
-
-
     }
 }

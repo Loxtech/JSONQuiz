@@ -2,7 +2,7 @@
   {
     "Id": 1,
     "Question": "Hvor er value types gemt?",
-    "Info": "Value types er gemte i Stacken. Det er ting så som, strings, ints, bools osv. Stacken er hurtiger at tilgå",
+    "Info": "Value types er gemte i Stacken. Det er ting så som, double, ints, bools osv. Stacken er hurtiger at tilgå",
     "Answers": [
       {
         "Id": 1,

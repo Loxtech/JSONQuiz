@@ -9,7 +9,6 @@ namespace JSONQuiz
     public static class Randomizer
     {
         private static readonly Random _generator = new Random();
-
         public static int GetRandomNumber(int maxValue)
         {
             byte[] randomByte = new byte[1];
@@ -19,7 +18,6 @@ namespace JSONQuiz
             double randomValueInRange = Math.Floor(multiplier * maxValue);
             return (int)(1 + randomValueInRange);
         }
-
         public static List<int> GetListOfRandomNumbers(int amount, int maxValue)
         {
             var result = new List<int>();
@@ -34,6 +32,5 @@ namespace JSONQuiz
 
             return result;
         }
-
     }
 }

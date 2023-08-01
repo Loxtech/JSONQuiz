@@ -9,13 +9,11 @@ namespace JSONQuiz
 {
     public class Quiz
     {
-        
         public Quiz(int choice)
         {
             CreateQuestions(choice);
         }
         public List<Questions> AllQuestions { get; set; }
-
         public void CreateQuestions(int choice)
         {
             if (choice == 1)
@@ -35,8 +33,6 @@ namespace JSONQuiz
                 Console.WriteLine("Forkert input");
             }
         }
-           
-
         public Questions GetQuestion(int number)
         {
             var question = AllQuestions.ToList();
@@ -44,7 +40,4 @@ namespace JSONQuiz
             return question[number];
         }
     }
-
-    
-
 }
