@@ -42,7 +42,7 @@ namespace JSONQuiz
                             Console.ResetColor();
                         }
                     }
-                    Console.WriteLine("\nTryk en tilfældig kan for at fortsætte");
+                    Console.WriteLine("\nTryk en tilfældig knap for at fortsætte");
                     Console.ReadKey();
                     Console.Clear();
                 }
